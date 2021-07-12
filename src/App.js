@@ -1,14 +1,15 @@
 import './App.css';
 import TopNav from './Components/TopNav';
-import Sidebar from './Components/Sidebar';
-
+import MainContent from './Components/MainContent';
+import Footer from './Components/Footer';
 
 
 function App() {
   return (
     <>
       <TopNav />
-      <Sidebar />
+      <MainContent />
+      <Footer />
 
     </>
 
