@@ -2,7 +2,6 @@ import React from 'react';
 import { Paper, Grid, Card } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { useState } from 'react';
-import Label from './Label';
 
 const useStyles = makeStyles((theme) => ({
     shopItems: {
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: 25
     }
 }))
-function ProductList() {
+function RelatedProducts() {
     const [data, setData] = useState([
         {
             title: 'rame maika',
@@ -36,39 +35,18 @@ function ProductList() {
             title: 'rame maika',
             img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
             price: '100$'
-        },
-        {
-            title: 'rame maika',
-            img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-            price: '100$'
-        }, {
-            title: 'rame maika',
-            img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-            price: '100$'
-        },
-        {
-            title: 'rame maika',
-            img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-            price: '100$'
-        },
-        {
-            title: 'rame maika',
-            img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg',
-            price: '100$'
-        }, {
-            title: 'rame maika',
-            img: 'https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg',
-            price: '100$'
-        },
+        }
+        
+     
 
     ])
     const classes = useStyles();
     return (
         <div>
 
-            <Grid container spacing={4} className={classes.prodItem}>
+            <Grid container spacing={2} className={classes.prodItem}>
                 {data.map(el => (
-                    <Grid item lg={4} md={6} xs={12} className={classes.shopItems}>
+                    <Grid item lg={3} md={6} xs={12} className={classes.shopItems}>
                         <Card>
                             <img style={{
                                 width: '100%'
@@ -82,9 +60,8 @@ function ProductList() {
                 ))}
             </Grid>
 
-            <Label />
         </div>
     )
 }
 
-export default ProductList
+export default RelatedProducts

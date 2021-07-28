@@ -1,8 +1,15 @@
 import React from 'react';
-import { AppBar, Typography, Box, Button,  Grid, Link } from '@material-ui/core';
+import { AppBar, Typography, Box, Button,  Grid,} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {SINGLE} from './Roures'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   navBar: {
@@ -81,7 +88,7 @@ function TopNav() {
         <Link underline='none' className={classes.link} href="#" >
           <ArrowDropDownIcon />
         </Link>
-        <Link underline='none' className={classes.link} href="#" >
+        <Link underline='none' className={classes.link} to={SINGLE} >
           Shop
         </Link >
         <Link underline='none' className={classes.link} href="#" >

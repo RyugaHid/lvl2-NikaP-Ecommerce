@@ -302,6 +302,7 @@ function Sidebar() {
             }}>
                 Color
             </Typography>
+          
             <Box display='flex' flexWrap='wrap' ml='-15px' flexDirection='row'>
                 <Circle bgcolor='#FFFFFF' />
                 <Circle bgcolor='#9E9E9E' />
